@@ -1,0 +1,75 @@
+class Node:
+def __init__(self, data):
+self.data = data
+self.next = None
+Creating nodes
+n1 = Node("Google Google")
+n2 = Node("Jilla")
+n3 = Node("Matta ")
+n4 = Node("Vathi ridu")
+n5 = Node("Varisu")
+n6 = Node("TVK flag song")
+n7 = Node("Master")
+n8 = Node("Va thaliva")
+n9 = Node("Thalapathi kachari")
+Linking nodes
+n1.next = n2
+n2.next = n3
+n3.next = n4
+n4.next = n5
+n5.next = n6
+n6.next = n7
+n7.next = n8
+n8.next = n9
+head = n1
+def display(head):
+temp = head
+while temp:
+print(temp.data)
+temp = temp.next
+print("Original Playlist")
+display(head)
+Insert at Beginning
+print("
+Insert at Beginning")
+new1 = Node("Kananae kannanae")
+new1.next = head
+head = new1
+display(head)
+Insert at Middle (after n5)
+print("
+Insert at Middle")
+new2 = Node("Middle Song")
+new2.next = n5.next
+n5.next = new2
+display(head)
+Insert at End
+print("
+Insert at End")
+new3 = Node("Last Song")
+temp = head
+while temp.next:
+temp = temp.next
+temp.next = new3
+display(head)
+Delete at Beginning
+print("
+Delete at Beginning")
+head = head.next
+display(head)
+Delete at Middle (delete Middle Song)
+print("
+Delete at Middle")
+temp = head
+while temp.next.data != "Middle Song":
+temp = temp.next
+temp.next = temp.next.next
+display(head)
+Delete at End
+print("
+Delete at End")
+temp = head
+while temp.next.next:
+temp = temp.next
+temp.next = None
+display(head)
