@@ -1,0 +1,66 @@
+def _init_(self):class Stack:    #Array Implementation
+
+    def _init_(self):
+        self.stack = []
+       
+    def push(self,item):
+        self.stack.append(item)
+        print(item,"is pushed to stack")
+    def pop(self):
+        if self.is_empty():
+            return "Stack Underflow"
+        return self.stack.pop()
+    def peek(self):
+        if self.is_empty():
+            return "Stack is empty"
+        return self.stack[-1]
+    def is_empty(self):
+        return len(self.stack) == 0
+    def size(self):
+        return len(self.stack)
+    def display(self):
+        print("Stack elements:", self.stack)
+
+b=Stack()
+b.push("Harry Potter")
+b.push("The Dark")
+b.push("My Life")
+
+
+
+choice= int(input("Enter the choice(1-6)"))
+if choice==1:
+    a=input("Enter a book title to push:")
+    b.push(a)
+elif choice==2:
+    removed_element=Stack.pop
+    if removed_element=="stack underflow":
+        print(removed_element)
+    else:
+        print("Popped:",b.pop())
+elif choice==3:
+    print("The top book is ",b.peek())
+b.display()
+    self.stack = []
+   
+def push(self,item):
+    self.stack.append(item)
+    print(f"{item} pushed to stack")
+def pop(self):
+    if self.is_empty():
+        return "Stack Underflow"
+    return self.stack.pop()
+def peek(self):
+    if self.is_empty():
+        return "Stack is empty"
+    return self.stack[-1]
+def is_empty(self):
+    return len(self.stack) == 0
+def size(self):
+    return len(self.stack)
+def display(self):
+    print("Stack elements:", self.stack)
+
+b=Stack() b.push("Maths") b.push("Tamil") b.push("English")
+
+choice= int(input("Enter the choice(1-6)")) if choice==1: a=input("Enter a book title to push:") b.push(a) elif choice==2: removed_element=Stack.pop if removed_element=="stack underflow": print(removed_element) else: print("Popped:",b.pop()) elif choice==3: print("The top book is ",b.peek()) b.display()
